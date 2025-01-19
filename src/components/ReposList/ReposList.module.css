@@ -1,26 +1,58 @@
 .list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px;
+  gap: 1rem;
+  margin-bottom: 3.125rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .listItem {
   list-style: none;
-  padding: 16px;
+  padding: 1rem;
   border: 1px solid rgba(0,0,0, 0.1);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.itemName , .itemLanguage {
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .itemName b, .itemLanguage b {
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .itemLink {
   display: block;
-  background-color: var(--corSecundaria);
-  color: white;
+  background-color: var(--orange-600);
+  color: var(--white);
   text-align: center;
   font-weight: bold;
-  margin-top: 8px;
-  padding: 8px;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
   text-decoration: none;
+  border-radius: 8px;
+}
+
+.itemLink:hover {
+  background-color: var(--orange-400);
+}
+
+.erroMessage {
+  text-align: center;
+  margin-bottom: 3.125rem;
+}
+
+.carregandoMessage {
+  text-align: center;
+  margin-bottom: 3.125rem;
+}
+
+@media(max-width: 768px) {
+  .list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+  }
 }

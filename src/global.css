@@ -1,17 +1,31 @@
+:root {
+  --white: #ffffff;
+  --black-900: #0D0003;
+  --orange-400: #F27405;
+  --orange-500: #F25C05;
+  --orange-600: #F24405;
+  --red-800: #A60808;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 .container {
-  max-width: 960px;
+  max-width: 60rem;
   width: 100%;
   margin: 0 auto;
-}
-
-:root {
-  --corPrincipal: #e58e26;
-  --corSecundaria: #b71540;
 }
